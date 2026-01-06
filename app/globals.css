@@ -325,3 +325,55 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background: #606060;
 }
+
+/* ========================================
+   Glare Card Effect
+   - Desktop: Hover triggered
+   - Mobile: Scroll triggered (via JS class)
+   ======================================== */
+
+.glare-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+.glare-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 20;
+  pointer-events: none;
+  background: linear-gradient(
+    var(--glare-angle, -35deg),
+    transparent 40%,
+    var(--glare-rgba, rgba(255, 255, 255, 0.4)) 50%,
+    transparent 60%
+  );
+  background-size: var(--glare-size, 300%) var(--glare-size, 300%);
+  background-repeat: no-repeat;
+  background-position: -100% -100%;
+  transition: background-position var(--glare-duration, 800ms) ease;
+}
+
+/* Desktop: Hover triggers glare sweep */
+@media (hover: hover) and (pointer: fine) {
+  .glare-card:hover::before {
+    background-position: 200% 200%;
+  }
+}
+
+/* Mobile/Touch: Scroll triggers glare sweep via JS class */
+@media (hover: none), (pointer: coarse) {
+  .glare-card--active::before {
+    background-position: 200% 200%;
+  }
+}
+
+/* Fallback for desktop when JS adds active class (optional enhancement) */
+@media (hover: hover) and (pointer: fine) {
+  .glare-card--active:not(:hover)::before {
+    /* Keep default position when not hovering on desktop */
+    background-position: -100% -100%;
+  }
+}

@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { motion, useInView } from "motion/react";
 import { AnimatedText } from "@/components/ui/AnimatedText";
 import { Button } from "@/components/ui/Button";
+import { GlareCard } from "@/components/ui/GlareCard";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 
@@ -91,26 +92,33 @@ export function ServiceBlock({
             animate={isInView ? { opacity: 1, scale: 1 } : {}}
             transition={{ duration: 1, delay: 0.2 }}
           >
-            <div
-              className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl bg-zinc-200"
-              style={{ aspectRatio: '4/3' }}
+            <GlareCard
+              className="relative aspect-[4/3] shadow-2xl bg-zinc-200"
+              glareOpacity={0.35}
+              glareAngle={-30}
+              transitionDuration={900}
             >
-              <div className="absolute inset-0 bg-black/5 z-10 hover:bg-transparent transition-colors duration-500" />
-              <Image
-                src={imageSrc}
-                alt={title}
-                fill
-                className="object-cover transform transition-transform duration-700 hover:scale-105"
-                sizes="(max-width: 768px) 100vw, 50vw"
-                priority={index === 0}
-              />
+              <div
+                className="relative w-full h-full"
+                style={{ aspectRatio: '4/3' }}
+              >
+                <div className="absolute inset-0 bg-black/5 z-10 hover:bg-transparent transition-colors duration-500" />
+                <Image
+                  src={imageSrc}
+                  alt={title}
+                  fill
+                  className="object-cover transform transition-transform duration-700 hover:scale-105"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  priority={index === 0}
+                />
+              </div>
 
               {/* Decorative Elements */}
               <div className={cn(
                 "absolute -z-10 w-2/3 h-2/3 rounded-full blur-[100px] opacity-30",
                 align === "left" ? "bg-primary -right-10 -bottom-10" : "bg-secondary -left-10 -top-10"
               )} />
-            </div>
+            </GlareCard>
           </motion.div>
         </div>
       </div>
