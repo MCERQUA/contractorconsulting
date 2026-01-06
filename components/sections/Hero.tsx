@@ -117,7 +117,7 @@ export function Hero() {
       // Sunset effect - gradient overlay fades in for day-to-dusk transition
       gsap.from('.gradient-overlay', {
         opacity: 0,
-        duration: 6,
+        duration: 4,
         delay: 0.3,
         ease: 'power2.inOut',
       });
