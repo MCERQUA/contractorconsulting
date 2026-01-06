@@ -65,11 +65,11 @@ export function Hero() {
           <span className="text-sm font-medium text-primary uppercase tracking-widest">Premium Contracting Services</span>
         </div>
         
-        <div className="flex flex-col items-center justify-center max-w-[100vw] mx-auto w-full px-2 overflow-hidden">
+        <div className="flex flex-col items-center justify-center w-full px-2">
           <AnimatedText
             as="h1"
             animation="wave"
-            className="text-[12vw] lg:text-[10rem] leading-[1.1] font-black tracking-tighter text-primary whitespace-nowrap"
+            className="text-[13vw] leading-[1.1] font-black tracking-tighter text-primary whitespace-nowrap"
           >
             Consulting
           </AnimatedText>
@@ -77,7 +77,7 @@ export function Hero() {
             as="h1"
             animation="wave"
             stagger={0.1}
-            className="text-[12vw] lg:text-[10rem] leading-[1.1] font-black tracking-tighter text-secondary whitespace-nowrap mb-8"
+            className="text-[13vw] leading-[1.1] font-black tracking-tighter text-secondary whitespace-nowrap mb-8"
           >
             Contractors
           </AnimatedText>

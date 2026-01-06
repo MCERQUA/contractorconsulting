@@ -226,6 +226,11 @@
 }
 
 @layer base {
+  * {
+    hyphens: none;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+  }
   body {
     color: var(--foreground);
     background-color: var(--background);
