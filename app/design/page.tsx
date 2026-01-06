@@ -37,7 +37,7 @@ export default function DesignPage() {
         title="Permitting Services"
         subtitle="Navigate the Red Tape"
         description="Let us handle the complexities of building permits and city requirements. Our permitting specialists have established relationships with local building departments and understand exactly what's needed to get your project approved quickly and efficiently."
-        imageSrc="/images/generated/insurance-approved.webp"
+        imageSrc="/images/generated/building-permit.webp"
         align="right"
         bgColor="white"
         index={2}

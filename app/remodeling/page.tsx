@@ -48,7 +48,7 @@ export default function RemodelingPage() {
         title="Bathrooms"
         subtitle="Spa-Like Retreats"
         description="Escape the everyday in your own personal sanctuary. Our bathroom remodels feature luxurious finishes, efficient layouts, and spa-inspired designs that turn your morning routine into a relaxing experience."
-        imageSrc="/images/generated/bathroom-blueprint.webp"
+        imageSrc="/images/generated/bathroom-spa.webp"
         align="left"
         bgColor="white"
         index={1}

@@ -15,14 +15,14 @@ const projects = [
   { category: "Remodeling", image: "/images/generated/kitchen.webp", title: "Modern Kitchen Renovation" },
   { category: "Siding", image: "/images/generated/siding-hero.webp", title: "James Hardie Installation" },
   { category: "Framing", image: "/images/generated/framing.webp", title: "Custom Home Framing" },
-  { category: "Decks", image: "/images/generated/deck.webp", title: "Multi-Level Deck Build" },
-  { category: "Remodeling", image: "/images/generated/bathroom-blueprint.webp", title: "Luxury Bathroom Remodel" },
+  { category: "Decks", image: "/images/generated/deck-cedar.webp", title: "Natural Cedar Deck" },
+  { category: "Remodeling", image: "/images/generated/bathroom-spa.webp", title: "Luxury Bathroom Remodel" },
   { category: "Roofing", image: "/images/generated/roof-repair.webp", title: "Storm Damage Repair" },
-  { category: "Siding", image: "/images/generated/siding-vinyl.webp", title: "Full Exterior Renovation" },
+  { category: "Siding", image: "/images/generated/siding-vinyl.webp", title: "Vinyl Siding Installation" },
   { category: "Framing", image: "/images/generated/framing-addition.webp", title: "Second Story Addition" },
-  { category: "Decks", image: "/images/generated/deck-composite.webp", title: "Cedar Deck with Pergola" },
+  { category: "Decks", image: "/images/generated/deck-pergola.webp", title: "Multi-Level Deck with Pergola" },
   { category: "Remodeling", image: "/images/generated/basement.webp", title: "Basement Transformation" },
-  { category: "Roofing", image: "/images/generated/roof-replacement.webp", title: "Metal Roof Installation" },
+  { category: "Roofing", image: "/images/generated/roof-metal.webp", title: "Metal Roof Installation" },
 ];
 
 export default function PortfolioPage() {

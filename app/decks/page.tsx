@@ -17,7 +17,7 @@ export default function DecksPage() {
         title="Custom Wood Decks"
         subtitle="Natural Beauty"
         description="Experience the timeless beauty of natural wood decking. We work with premium materials including cedar, redwood, and pressure-treated lumber to create stunning outdoor spaces. Each deck is custom-designed to complement your home's architecture and maximize your outdoor living potential."
-        imageSrc="/images/generated/deck.webp"
+        imageSrc="/images/generated/deck-cedar.webp"
         align="right"
         bgColor="white"
         index={0}
@@ -37,7 +37,7 @@ export default function DecksPage() {
         title="Multi-Level & Custom Features"
         subtitle="Beyond Basic"
         description="From multi-level designs and built-in seating to pergolas and outdoor kitchens, we create complete outdoor living experiences. Our design team works with you to incorporate features like lighting, railings, and privacy screens that make your deck truly unique."
-        imageSrc="/images/generated/deck.webp"
+        imageSrc="/images/generated/deck-pergola.webp"
         align="right"
         bgColor="white"
         index={2}

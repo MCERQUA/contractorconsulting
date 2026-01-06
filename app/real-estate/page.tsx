@@ -37,7 +37,7 @@ export default function RealEstatePage() {
         title="Property Assessment"
         subtitle="Know Before You Buy"
         description="Considering a property purchase? Our experts provide detailed assessments of renovation potential, estimated costs, and projected timelines. Make informed investment decisions with accurate data on what it will take to bring a property to market-ready condition."
-        imageSrc="/images/generated/financing-hero.webp"
+        imageSrc="/images/generated/property-assessment.webp"
         align="right"
         bgColor="white"
         index={2}
