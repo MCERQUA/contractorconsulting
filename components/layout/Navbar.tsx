@@ -9,12 +9,15 @@ import Link from "next/link";
 
 const navItems = [
   { name: "Home", href: "/" },
-  { name: "Roofing", href: "#roofing" },
-  { name: "Remodeling", href: "#remodeling" },
-  { name: "Siding", href: "#siding" },
-  { name: "Framing", href: "#framing" },
-  { name: "Design", href: "#design" },
-  { name: "Portfolio", href: "#portfolio" },
+  { name: "Roofing", href: "/roofing" },
+  { name: "Remodeling", href: "/remodeling" },
+  { name: "Siding", href: "/siding" },
+  { name: "Framing", href: "/framing" },
+  { name: "Decks", href: "/decks" },
+  { name: "Design", href: "/design" },
+  { name: "Real Estate", href: "/real-estate" },
+  { name: "Portfolio", href: "/portfolio" },
+  { name: "Financing", href: "/financing" },
 ];
 
 export function Navbar() {
@@ -70,9 +73,11 @@ export function Navbar() {
               {item.name}
             </Link>
           ))}
-          <Button size="sm" variant="primary">
-            Contact Us
-          </Button>
+          <Link href="/contact">
+            <Button size="sm" variant="primary">
+              Contact Us
+            </Button>
+          </Link>
         </nav>
 
         {/* Mobile Toggle */}
@@ -103,7 +108,9 @@ export function Navbar() {
             </motion.div>
           ))}
           <motion.div whileTap={{ scale: 0.95 }}>
-            <Button className="w-full">Contact Us</Button>
+            <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)}>
+              <Button className="w-full">Contact Us</Button>
+            </Link>
           </motion.div>
         </motion.div>
       )}
