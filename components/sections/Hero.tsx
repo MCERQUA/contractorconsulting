@@ -114,11 +114,12 @@ export function Hero() {
         ease: 'power3.out',
       });
 
-      // Gradient overlay reveal
+      // Slow sunset effect - gradient overlay fades in slowly like day turning to dusk
       gsap.from('.gradient-overlay', {
         opacity: 0,
-        duration: 2,
-        ease: 'power2.inOut',
+        duration: 12,
+        delay: 0.5,
+        ease: 'power1.inOut',
       });
 
     }, containerRef);
