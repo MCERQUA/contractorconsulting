@@ -227,15 +227,23 @@
 
 @layer base {
   * {
-    hyphens: none;
-    -webkit-hyphens: none;
-    -moz-hyphens: none;
+    hyphens: none !important;
+    -webkit-hyphens: none !important;
+    -moz-hyphens: none !important;
+    word-break: normal !important;
+    overflow-wrap: normal !important;
   }
   body {
     color: var(--foreground);
     background-color: var(--background);
     overflow-x: hidden;
   }
+}
+
+/* SplitType word containers - NEVER break words */
+.word {
+  display: inline-block !important;
+  white-space: nowrap !important;
 }
 
 /* Smooth Scrolling */

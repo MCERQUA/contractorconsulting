@@ -31,11 +31,20 @@ export function AnimatedText({
   useEffect(() => {
     if (!textRef.current) return;
 
-    // Split text
+    // Split text - use words,chars to keep words together (prevents mid-word line breaks)
+    // Words become inline-block containers, chars animate within them
     const split = new SplitType(textRef.current, {
-      types: animation === 'cascade' ? 'words' : 'chars',
+      types: animation === 'cascade' ? 'words' : 'words,chars',
       tagName: 'span',
     });
+
+    // Ensure word containers prevent line breaks within words
+    if (split.words) {
+      split.words.forEach((word) => {
+        word.style.display = 'inline-block';
+        word.style.whiteSpace = 'nowrap';
+      });
+    }
 
     const elements = animation === 'cascade' ? split.words : split.chars;
     if (!elements) return;
