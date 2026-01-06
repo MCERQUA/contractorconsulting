@@ -10,7 +10,7 @@ export default function DecksPage() {
       <PageHero
         title="Decks"
         subtitle="Custom outdoor living spaces built to last"
-        imageSrc="/images/generated/deck.png"
+        imageSrc="/images/generated/deck.webp"
       />
 
       <ServiceBlock

@@ -10,7 +10,7 @@ export default function FramingPage() {
       <PageHero
         title="Custom Framing"
         subtitle="Structural excellence for complex builds and additions"
-        imageSrc="/images/generated/framing.png"
+        imageSrc="/images/generated/framing.webp"
       />
 
       <ServiceBlock

@@ -10,7 +10,7 @@ export default function SidingPage() {
       <PageHero
         title="Siding"
         subtitle="Premium exterior solutions for lasting curb appeal"
-        imageSrc="/images/generated/siding-hero.png"
+        imageSrc="/images/generated/siding-hero.webp"
       />
 
       <ServiceBlock

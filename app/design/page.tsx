@@ -10,7 +10,7 @@ export default function DesignPage() {
       <PageHero
         title="Design"
         subtitle="From vision to reality with expert design and permitting"
-        imageSrc="/images/generated/design.png"
+        imageSrc="/images/generated/design.webp"
         overlay="light"
       />
 

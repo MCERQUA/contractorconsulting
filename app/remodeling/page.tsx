@@ -10,7 +10,7 @@ export default function RemodelingPage() {
       <PageHero
         title="Remodeling"
         subtitle="Transform your living spaces with premium renovation services"
-        imageSrc="/images/generated/remodeling-hero.png"
+        imageSrc="/images/generated/remodeling-hero.webp"
       />
 
       {/* Process Overview */}
@@ -38,7 +38,7 @@ export default function RemodelingPage() {
         title="Kitchens"
         subtitle="Heart of the Home"
         description="Transform your kitchen into the heart of your home. From custom cabinetry and premium countertops to modern appliances and thoughtful layouts, we create chef-worthy spaces that bring families together."
-        imageSrc="/images/generated/kitchen.png"
+        imageSrc="/images/generated/kitchen.webp"
         align="right"
         bgColor="gray"
         index={0}
@@ -48,7 +48,7 @@ export default function RemodelingPage() {
         title="Bathrooms"
         subtitle="Spa-Like Retreats"
         description="Escape the everyday in your own personal sanctuary. Our bathroom remodels feature luxurious finishes, efficient layouts, and spa-inspired designs that turn your morning routine into a relaxing experience."
-        imageSrc="/images/generated/bathroom-blueprint.png"
+        imageSrc="/images/generated/bathroom-blueprint.webp"
         align="left"
         bgColor="white"
         index={1}
@@ -58,7 +58,7 @@ export default function RemodelingPage() {
         title="Basements"
         subtitle="Unlock Hidden Potential"
         description="Transform unused basement space into valuable living area. Whether you envision a home theater, wet bar, guest suite, or home gym, we handle everything from waterproofing to finishing touches."
-        imageSrc="/images/generated/basement.png"
+        imageSrc="/images/generated/basement.webp"
         align="right"
         bgColor="gray"
         index={2}
