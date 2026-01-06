@@ -65,23 +65,25 @@ export function Hero() {
           <span className="text-sm font-medium text-primary uppercase tracking-widest">Premium Contracting Services</span>
         </div>
         
-        <AnimatedText
-          as="h1"
-          animation="wave"
-          className="text-6xl md:text-8xl lg:text-9xl font-black tracking-tight mb-8 bg-gradient-to-b from-primary to-primary/60 bg-clip-text text-transparent"
-        >
-          Consulting
-        </AnimatedText>
-        <AnimatedText
-          as="h1"
-          animation="wave"
-          stagger={0.1}
-          className="text-6xl md:text-8xl lg:text-9xl font-black tracking-tight mb-12 text-outline-primary"
-        >
-          Contractors
-        </AnimatedText>
+        <div className="flex flex-col items-center justify-center max-w-5xl mx-auto w-full">
+          <AnimatedText
+            as="h1"
+            animation="wave"
+            className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black tracking-tighter mb-4 text-primary w-full break-words"
+          >
+            Consulting
+          </AnimatedText>
+          <AnimatedText
+            as="h1"
+            animation="wave"
+            stagger={0.1}
+            className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black tracking-tighter mb-12 text-secondary w-full break-words"
+          >
+            Contractors
+          </AnimatedText>
+        </div>
 
-        <p className="max-w-2xl mx-auto text-lg md:text-xl text-foreground/80 mb-10 leading-relaxed">
+        <p className="max-w-2xl mx-auto text-lg md:text-xl text-foreground/80 mb-10 leading-relaxed px-4">
           Elevating construction standards with precision, design, and integrity. 
           From custom framing to high-end remodels.
         </p>
