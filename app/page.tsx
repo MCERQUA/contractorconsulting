@@ -1,14 +1,14 @@
 import { Navbar } from "@/components/layout/Navbar";
 import { Hero } from "@/components/sections/Hero";
-import { Services } from "@/components/sections/Services";
+import { ServiceLayout } from "@/components/sections/ServiceLayout";
 import { Footer } from "@/components/layout/Footer";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-dark-900 selection:bg-primary/30 selection:text-white">
+    <main className="min-h-screen bg-background selection:bg-primary/20 selection:text-primary">
       <Navbar />
       <Hero />
-      <Services />
+      <ServiceLayout />
       <Footer />
     </main>
   );
