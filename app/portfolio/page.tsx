@@ -11,18 +11,18 @@ import { cn } from "@/lib/utils";
 const categories = ["All", "Roofing", "Remodeling", "Siding", "Framing", "Decks"];
 
 const projects = [
-  { category: "Roofing", image: "https://images.unsplash.com/photo-1632759145351-1d592919f522?q=80&w=800", title: "Complete Roof Replacement" },
-  { category: "Remodeling", image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?q=80&w=800", title: "Modern Kitchen Renovation" },
-  { category: "Siding", image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800", title: "James Hardie Installation" },
-  { category: "Framing", image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=800", title: "Custom Home Framing" },
-  { category: "Decks", image: "https://images.unsplash.com/photo-1591825729269-caeb344f6df2?q=80&w=800", title: "Multi-Level Deck Build" },
-  { category: "Remodeling", image: "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?q=80&w=800", title: "Luxury Bathroom Remodel" },
-  { category: "Roofing", image: "https://images.unsplash.com/photo-1635424710928-0544e8512eae?q=80&w=800", title: "Storm Damage Repair" },
-  { category: "Siding", image: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?q=80&w=800", title: "Full Exterior Renovation" },
-  { category: "Framing", image: "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?q=80&w=800", title: "Second Story Addition" },
-  { category: "Decks", image: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?q=80&w=800", title: "Cedar Deck with Pergola" },
-  { category: "Remodeling", image: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=800", title: "Basement Transformation" },
-  { category: "Roofing", image: "https://images.unsplash.com/photo-1632759145354-dde40e0a1afd?q=80&w=800", title: "Metal Roof Installation" },
+  { category: "Roofing", image: "/images/generated/roofing-hero.webp", title: "Complete Roof Replacement" },
+  { category: "Remodeling", image: "/images/generated/kitchen.webp", title: "Modern Kitchen Renovation" },
+  { category: "Siding", image: "/images/generated/siding-hero.webp", title: "James Hardie Installation" },
+  { category: "Framing", image: "/images/generated/framing.webp", title: "Custom Home Framing" },
+  { category: "Decks", image: "/images/generated/deck.webp", title: "Multi-Level Deck Build" },
+  { category: "Remodeling", image: "/images/generated/bathroom-blueprint.webp", title: "Luxury Bathroom Remodel" },
+  { category: "Roofing", image: "/images/generated/roof-repair.webp", title: "Storm Damage Repair" },
+  { category: "Siding", image: "/images/generated/siding-vinyl.webp", title: "Full Exterior Renovation" },
+  { category: "Framing", image: "/images/generated/framing-addition.webp", title: "Second Story Addition" },
+  { category: "Decks", image: "/images/generated/deck-composite.webp", title: "Cedar Deck with Pergola" },
+  { category: "Remodeling", image: "/images/generated/basement.webp", title: "Basement Transformation" },
+  { category: "Roofing", image: "/images/generated/roof-replacement.webp", title: "Metal Roof Installation" },
 ];
 
 export default function PortfolioPage() {
@@ -38,7 +38,7 @@ export default function PortfolioPage() {
       <PageHero
         title="Portfolio"
         subtitle="Browse our completed projects and see our craftsmanship"
-        imageSrc="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=2070&auto=format&fit=crop"
+        imageSrc="/images/generated/remodeling-hero.webp"
       />
 
       <section className="py-20">

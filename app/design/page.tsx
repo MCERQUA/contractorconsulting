@@ -17,27 +17,30 @@ export default function DesignPage() {
         title="3D Renderings"
         subtitle="Visualize Your Project"
         description="See your project before construction begins. Our advanced 3D rendering services bring your vision to life, allowing you to explore different materials, colors, and layouts. Make confident decisions with photorealistic visualizations that show exactly what your finished project will look like."
-        imageSrc="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=2070&auto=format&fit=crop"
+        imageSrc="/images/generated/design.webp"
         align="right"
         bgColor="white"
+        index={0}
       />
 
       <ServiceBlock
         title="Floor Plans & Blueprints"
         subtitle="Detailed Planning"
         description="Our design team creates comprehensive floor plans and construction documents that guide every aspect of your project. From spatial layouts to structural details, we ensure your plans meet all building codes while maximizing functionality and aesthetic appeal."
-        imageSrc="https://images.unsplash.com/photo-1536895058696-a69b1c7ba34f?q=80&w=2070&auto=format&fit=crop"
+        imageSrc="/images/generated/design-blueprints.webp"
         align="left"
         bgColor="gray"
+        index={1}
       />
 
       <ServiceBlock
         title="Permitting Services"
         subtitle="Navigate the Red Tape"
         description="Let us handle the complexities of building permits and city requirements. Our permitting specialists have established relationships with local building departments and understand exactly what's needed to get your project approved quickly and efficiently."
-        imageSrc="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=2070&auto=format&fit=crop"
+        imageSrc="/images/generated/insurance-approved.webp"
         align="right"
         bgColor="white"
+        index={2}
       />
 
       <Footer />

@@ -48,7 +48,7 @@ export default function FinancingPage() {
       <PageHero
         title="Financing"
         subtitle="Flexible payment options to make your project possible"
-        imageSrc="https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=2072&auto=format&fit=crop"
+        imageSrc="/images/generated/financing-hero.webp"
       />
 
       <section className="py-20 bg-white">
