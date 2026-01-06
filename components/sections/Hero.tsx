@@ -48,28 +48,27 @@ export function Hero() {
     <section ref={containerRef} className="relative h-screen w-full overflow-hidden flex items-center justify-center">
       {/* Background Layer */}
       <div className="hero-bg absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-dark-900 via-dark-800 to-black z-10 opacity-80" />
-        {/* Placeholder for Video - Using an animated gradient or pattern */}
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center opacity-60" />
-        <div className="absolute inset-0 bg-gradient-to-t from-dark-900 to-transparent z-20" />
+        {/* Simplified background for white/black theme - reduced overlay */}
+        <div className="absolute inset-0 bg-white opacity-90" /> {/* Base white background */}
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center opacity-10" /> {/* Very subtle background image */}
       </div>
 
-      {/* Floating Orbs */}
+      {/* Floating Orbs (adjusted for light theme) */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none z-10">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-[100px] animate-pulse" />
-        <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-secondary/10 rounded-full blur-[120px]" />
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-secondary/20 rounded-full blur-[100px] animate-pulse" />
+        <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[120px]" />
       </div>
 
       {/* Content */}
       <div className="hero-content relative z-30 container mx-auto px-6 text-center">
-        <div className="inline-block mb-6 px-4 py-1.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-md">
+        <div className="inline-block mb-6 px-4 py-1.5 rounded-full border border-black/10 bg-black/5 backdrop-blur-md">
           <span className="text-sm font-medium text-primary uppercase tracking-widest">Premium Contracting Services</span>
         </div>
         
         <AnimatedText
           as="h1"
           animation="wave"
-          className="text-6xl md:text-8xl lg:text-9xl font-black tracking-tight mb-8 bg-gradient-to-b from-white to-white/60 bg-clip-text text-transparent"
+          className="text-6xl md:text-8xl lg:text-9xl font-black tracking-tight mb-8 bg-gradient-to-b from-primary to-primary/60 bg-clip-text text-transparent"
         >
           Consulting
         </AnimatedText>
@@ -77,12 +76,12 @@ export function Hero() {
           as="h1"
           animation="wave"
           stagger={0.1}
-          className="text-6xl md:text-8xl lg:text-9xl font-black tracking-tight mb-12 text-outline-white"
+          className="text-6xl md:text-8xl lg:text-9xl font-black tracking-tight mb-12 text-outline-primary"
         >
           Contractors
         </AnimatedText>
 
-        <p className="max-w-2xl mx-auto text-lg md:text-xl text-white/60 mb-10 leading-relaxed">
+        <p className="max-w-2xl mx-auto text-lg md:text-xl text-foreground/80 mb-10 leading-relaxed">
           Elevating construction standards with precision, design, and integrity. 
           From custom framing to high-end remodels.
         </p>

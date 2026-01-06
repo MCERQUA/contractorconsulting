@@ -25,7 +25,7 @@ export function Navbar() {
   const backgroundColor = useTransform(
     scrollY,
     [0, 50],
-    ["rgba(10, 10, 15, 0)", "rgba(15, 24, 37, 0.8)"]
+    ["rgba(255, 255, 255, 0)", "rgba(255, 255, 255, 0.8)"] // White-based background
   );
 
   const backdropBlur = useTransform(
@@ -46,7 +46,7 @@ export function Navbar() {
     <motion.header
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b",
-        isScrolled ? "border-white/10" : "border-transparent"
+        isScrolled ? "border-black/10" : "border-transparent" // Black border
       )}
       style={{
         backgroundColor,
@@ -55,8 +55,8 @@ export function Navbar() {
       }}
     >
       <div className="container mx-auto px-6 h-20 flex items-center justify-between">
-        <Link href="/" className="text-2xl font-black tracking-tighter bg-gradient-to-r from-white to-white/70 bg-clip-text text-transparent">
-          CC<span className="text-primary">.</span>
+        <Link href="/" className="text-2xl font-black tracking-tighter bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
+          CC<span className="text-secondary">.</span>
         </Link>
 
         {/* Desktop Nav */}
@@ -65,7 +65,7 @@ export function Navbar() {
             <Link
               key={item.name}
               href={item.href}
-              className="text-sm font-medium text-white/70 hover:text-primary transition-colors duration-300"
+              className="text-sm font-medium text-foreground/70 hover:text-primary transition-colors duration-300"
             >
               {item.name}
             </Link>
@@ -77,7 +77,7 @@ export function Navbar() {
 
         {/* Mobile Toggle */}
         <button
-          className="lg:hidden text-white"
+          className="lg:hidden text-foreground" // Text color changed
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           {isMobileMenuOpen ? <X /> : <Menu />}
@@ -89,13 +89,13 @@ export function Navbar() {
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="lg:hidden absolute top-20 left-0 right-0 bg-dark-900/95 backdrop-blur-xl border-b border-white/10 p-6 flex flex-col gap-4 shadow-2xl"
+          className="lg:hidden absolute top-20 left-0 right-0 bg-background/95 backdrop-blur-xl border-b border-black/10 p-6 flex flex-col gap-4 shadow-2xl" // Background and border changed
         >
           {navItems.map((item) => (
             <motion.div key={item.name} whileTap={{ scale: 0.95, x: 10 }}>
               <Link
                 href={item.href}
-                className="block text-lg font-medium text-white/80 active:text-primary py-2"
+                className="block text-lg font-medium text-foreground/80 active:text-primary py-2"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {item.name}

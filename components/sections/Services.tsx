@@ -12,7 +12,7 @@ const services = [
     title: "Roofing",
     description: "Expert repairs, replacements, and maintenance using top-tier materials like Malarkey and Owen's Corning.",
     icon: ShieldCheck,
-    color: "blue"
+    color: "blue" // Color is not directly used for styling anymore, but can keep for internal context
   },
   {
     title: "Remodeling",
@@ -69,18 +69,18 @@ export function Services() {
   };
 
   return (
-    <section id="services" className="relative py-32 bg-dark-900 overflow-hidden">
-      <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-primary/5 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2 pointer-events-none" />
+    <section id="services" className="relative py-32 bg-background overflow-hidden"> {/* Background changed */}
+      <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-secondary/5 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2 pointer-events-none" /> {/* Orb color changed */}
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="mb-20 max-w-3xl">
           <AnimatedText as="h2" animation="slideUp" className="text-sm font-bold text-primary uppercase tracking-widest mb-4">
             Our Expertise
           </AnimatedText>
-          <AnimatedText as="h3" animation="cascade" className="text-5xl md:text-6xl font-black text-white mb-6 whitespace-pre-line">
+          <AnimatedText as="h3" animation="cascade" className="text-5xl md:text-6xl font-black text-primary mb-6 whitespace-pre-line">
             {"Building Excellence\nIn Every Detail."}
           </AnimatedText>
-          <p className="text-xl text-white/60">
+          <p className="text-xl text-foreground/80"> {/* Text color changed */}
             We bring years of experience and a commitment to quality in every project we undertake.
           </p>
         </div>
@@ -96,11 +96,11 @@ export function Services() {
             <motion.div key={idx} variants={itemVariants}>
               <PremiumCard className="h-full flex flex-col justify-between group/card">
                 <div>
-                  <div className={`w-14 h-14 rounded-2xl bg-white/5 flex items-center justify-center mb-6 group-hover/card:bg-primary/20 transition-colors duration-300`}>
-                    <service.icon className="w-7 h-7 text-white/80 group-hover/card:text-primary transition-colors" />
+                  <div className={`w-14 h-14 rounded-2xl bg-black/5 flex items-center justify-center mb-6 group-hover/card:bg-primary/10 transition-colors duration-300`}> {/* Background changed */}
+                    <service.icon className="w-7 h-7 text-primary/80 group-hover/card:text-primary transition-colors" /> {/* Icon color changed */}
                   </div>
-                  <h4 className="text-2xl font-bold text-white mb-3">{service.title}</h4>
-                  <p className="text-white/60 leading-relaxed mb-6">
+                  <h4 className="text-2xl font-bold text-primary mb-3">{service.title}</h4>
+                  <p className="text-foreground/70 leading-relaxed mb-6"> {/* Text color changed */}
                     {service.description}
                   </p>
                 </div>

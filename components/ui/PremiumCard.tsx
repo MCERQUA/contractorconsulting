@@ -65,11 +65,11 @@ export function PremiumCard({ children, className, onClick }: PremiumCardProps) 
         transformStyle: "preserve-3d",
       }}
       className={cn(
-        "relative rounded-2xl bg-dark-800/50 p-6 backdrop-blur-xl border border-white/10 overflow-hidden group transition-all duration-300",
+        "relative rounded-2xl bg-white/50 p-6 backdrop-blur-xl border border-black/10 overflow-hidden group transition-all duration-300", // Light glass background and black border
         // Desktop: Hover effects
-        "hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/10",
+        "hover:border-primary/50 hover:shadow-2xl hover:shadow-black/10",
         // Mobile: Active state for touch feedback
-        "active:border-primary/50 active:bg-dark-800/80",
+        "active:border-primary/50 active:bg-white/80", // Light active state
         className
       )}
     >
@@ -77,7 +77,7 @@ export function PremiumCard({ children, className, onClick }: PremiumCardProps) 
       <div 
         className="pointer-events-none absolute -inset-px opacity-0 transition duration-300 group-hover:opacity-100 hidden md:block"
         style={{
-          background: `radial-gradient(600px circle at var(--mouse-x) var(--mouse-y), rgba(14, 165, 233, 0.15), transparent 40%)`
+          background: `radial-gradient(600px circle at var(--mouse-x) var(--mouse-y), rgba(0, 0, 0, 0.05), transparent 40%)` // Black accent glow
         }}
       />
       

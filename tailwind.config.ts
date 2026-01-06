@@ -9,20 +9,17 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        background: "#FFFFFF", // White background
+        foreground: "#1A1A1A", // Dark grey for text
         primary: {
-          DEFAULT: "#0EA5E9", // Sky blue/Teal
+          DEFAULT: "#000000", // Black for emphasis
           foreground: "#FFFFFF",
         },
         secondary: {
-          DEFAULT: "#F97316", // Orange
+          DEFAULT: "#808080", // Medium grey for subtle accents
           foreground: "#FFFFFF",
         },
-        dark: {
-          900: "#0f1825", // Deep blue/slate
-          800: "#1e293b",
-        },
+        // Removed 'dark' palette
       },
       fontFamily: {
         sans: ["var(--font-inter)", "sans-serif"],

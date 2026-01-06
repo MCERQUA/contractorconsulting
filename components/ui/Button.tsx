@@ -18,10 +18,10 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     const baseStyles = "inline-flex items-center justify-center rounded-lg font-bold transition-all duration-300 focus:outline-none disabled:opacity-50 disabled:pointer-events-none group";
     
     const variants = {
-      primary: "bg-gradient-to-r from-primary to-blue-600 text-white shadow-lg shadow-primary/30 hover:shadow-primary/50 hover:scale-[1.02]",
-      secondary: "bg-white text-dark-900 shadow-lg hover:bg-gray-100 hover:scale-[1.02]",
+      primary: "bg-primary text-primary-foreground shadow-lg shadow-black/30 hover:shadow-black/50 hover:scale-[1.02]", // Black button with white text
+      secondary: "bg-secondary text-primary shadow-lg hover:bg-secondary-foreground hover:scale-[1.02]", // Grey button with black text
       outline: "border-2 border-primary/50 text-primary hover:bg-primary/10",
-      ghost: "text-white/80 hover:text-white hover:bg-white/10",
+      ghost: "text-foreground/80 hover:text-primary hover:bg-foreground/10",
     };
 
     const sizes = {
