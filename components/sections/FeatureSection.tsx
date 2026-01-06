@@ -25,7 +25,7 @@ export function FeatureSection({
   index,
 }: FeatureSectionProps) {
   const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { once: true, margin: "-20%" });
+  const isInView = useInView(ref, { once: true, margin: "-10%" }); // Relaxed margin
 
   return (
     <section
@@ -83,7 +83,10 @@ export function FeatureSection({
             animate={isInView ? { opacity: 1, scale: 1 } : {}}
             transition={{ duration: 1, delay: 0.2 }}
           >
-            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
+            <div 
+              className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl bg-zinc-200"
+              style={{ aspectRatio: '4/3' }}
+            >
               <div className="absolute inset-0 bg-black/5 z-10 hover:bg-transparent transition-colors duration-500" />
               {/* Image Content */}
               <Image
@@ -92,6 +95,7 @@ export function FeatureSection({
                 fill
                 className="object-cover transform transition-transform duration-700 hover:scale-105"
                 sizes="(max-width: 768px) 100vw, 50vw"
+                priority={index === 0} // Prioritize loading the first image
               />
               
               {/* Decorative Elements */}

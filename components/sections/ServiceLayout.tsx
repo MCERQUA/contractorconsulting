@@ -7,7 +7,7 @@ const features = [
     title: "Roofing & Repairs",
     subtitle: "Protection Above All",
     description: "From minor repairs to complete replacements, we deliver roofing solutions that stand the test of time. Specializing in Malarkey and Owen's Corning materials for maximum durability and weather resistance.",
-    imageSrc: "https://images.unsplash.com/photo-1632759145351-1d592919f522?q=80&w=2070&auto=format&fit=crop",
+    imageSrc: "https://images.unsplash.com/photo-1534237710431-e2fc698436d0?q=80&w=2070&auto=format&fit=crop",
   },
   {
     title: "High-End Remodeling",
