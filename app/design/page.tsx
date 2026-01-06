@@ -11,7 +11,6 @@ export default function DesignPage() {
         title="Design"
         subtitle="From vision to reality with expert design and permitting"
         imageSrc="/images/generated/design.webp"
-        overlay="light"
       />
 
       <ServiceBlock

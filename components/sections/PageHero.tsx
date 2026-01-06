@@ -4,7 +4,6 @@ import { useRef } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { cn } from '@/lib/utils';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -13,15 +12,12 @@ interface PageHeroProps {
   subtitle?: string;
   imageSrc: string;
   imageAlt?: string;
-  overlay?: 'light' | 'dark';
 }
 
 export function PageHero({
   title,
   subtitle,
   imageSrc,
-  imageAlt,
-  overlay = 'dark'
 }: PageHeroProps) {
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -60,31 +56,22 @@ export function PageHero({
 
   return (
     <section ref={containerRef} className="relative h-[50vh] md:h-[60vh] w-full overflow-hidden flex items-center justify-center">
-      {/* Background Layer */}
+      {/* Background Layer - Always dark overlay */}
       <div className="page-hero-bg absolute inset-0 z-0">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${imageSrc})` }}
         />
-        <div className={cn(
-          "absolute inset-0",
-          overlay === 'dark' ? "bg-black/50" : "bg-white/30"
-        )} />
+        <div className="absolute inset-0 bg-black/50" />
       </div>
 
-      {/* Content */}
+      {/* Content - Always white text */}
       <div className="relative z-10 container mx-auto px-6 text-center">
-        <h1 className={cn(
-          "page-hero-title text-5xl md:text-7xl lg:text-8xl font-black tracking-tight mb-4",
-          overlay === 'dark' ? "text-white" : "text-primary"
-        )}>
+        <h1 className="page-hero-title text-5xl md:text-7xl lg:text-8xl font-black tracking-tight mb-4 text-white">
           {title}
         </h1>
         {subtitle && (
-          <p className={cn(
-            "page-hero-subtitle text-lg md:text-xl max-w-2xl mx-auto",
-            overlay === 'dark' ? "text-white/80" : "text-foreground/70"
-          )}>
+          <p className="page-hero-subtitle text-lg md:text-xl max-w-2xl mx-auto text-white/80">
             {subtitle}
           </p>
         )}
