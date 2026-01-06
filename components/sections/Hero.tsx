@@ -69,7 +69,7 @@ export function Hero() {
           <AnimatedText
             as="h1"
             animation="wave"
-            className="text-[13vw] leading-[1.1] font-black tracking-tighter text-primary whitespace-nowrap"
+            className="text-[11vw] leading-[1.1] font-black tracking-tighter text-primary whitespace-nowrap break-keep"
           >
             Consulting
           </AnimatedText>
@@ -77,7 +77,7 @@ export function Hero() {
             as="h1"
             animation="wave"
             stagger={0.1}
-            className="text-[13vw] leading-[1.1] font-black tracking-tighter text-secondary whitespace-nowrap mb-8"
+            className="text-[11vw] leading-[1.1] font-black tracking-tighter text-secondary whitespace-nowrap mb-8 break-keep"
           >
             Contractors
           </AnimatedText>
