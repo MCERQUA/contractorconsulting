@@ -48,7 +48,7 @@ export function Hero() {
     <section ref={containerRef} className="relative h-screen w-full overflow-hidden flex items-center justify-center">
       {/* Background Layer - Dark theme */}
       <div className="hero-bg absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center" />
+        <div className="absolute inset-0 bg-[url('/images/generated/hero-bg.webp')] bg-cover bg-center" />
         <div className="absolute inset-0 bg-black/60" /> {/* Dark overlay */}
       </div>
 
