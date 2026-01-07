@@ -7,6 +7,7 @@ import { PageHero } from "@/components/sections/PageHero";
 import { motion, useInView, AnimatePresence } from "motion/react";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
+import { X } from "lucide-react";
 
 const categories = ["All", "Roofing", "Remodeling", "Siding", "Framing", "Decks"];
 
@@ -28,9 +29,10 @@ const projects = [
 interface PortfolioCardProps {
   project: typeof projects[0];
   index: number;
+  onClick: (project: typeof projects[0]) => void;
 }
 
-function PortfolioCard({ project, index }: PortfolioCardProps) {
+function PortfolioCard({ project, index, onClick }: PortfolioCardProps) {
   const cardRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(cardRef, { once: true, amount: 0.2 });
 
@@ -43,6 +45,7 @@ function PortfolioCard({ project, index }: PortfolioCardProps) {
     <motion.div
       ref={cardRef}
       layout
+      onClick={() => onClick(project)}
       initial={{ opacity: 0, y: 60, scale: 0.9 }}
       animate={isInView ? {
         opacity: 1,
@@ -137,6 +140,7 @@ function PortfolioCard({ project, index }: PortfolioCardProps) {
 
 export default function PortfolioPage() {
   const [activeCategory, setActiveCategory] = useState("All");
+  const [selectedProject, setSelectedProject] = useState<typeof projects[0] | null>(null);
   const gridRef = useRef<HTMLDivElement>(null);
 
   const filteredProjects = activeCategory === "All"
@@ -201,6 +205,7 @@ export default function PortfolioPage() {
                   key={`${project.title}-${idx}`}
                   project={project}
                   index={idx}
+                  onClick={setSelectedProject}
                 />
               ))}
             </AnimatePresence>
@@ -219,6 +224,54 @@ export default function PortfolioPage() {
           )}
         </div>
       </section>
+
+      {/* Project Modal */}
+      <AnimatePresence>
+        {selectedProject && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setSelectedProject(null)}
+            className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm"
+          >
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              onClick={(e) => e.stopPropagation()}
+              className="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto bg-white rounded-2xl shadow-2xl"
+            >
+              <button
+                onClick={() => setSelectedProject(null)}
+                className="absolute top-4 right-4 z-50 p-2 bg-black/50 hover:bg-black/70 text-white rounded-full transition-colors"
+              >
+                <X size={24} />
+              </button>
+              
+              <div className="relative aspect-video w-full">
+                <Image
+                  src={selectedProject.image}
+                  alt={selectedProject.title}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              
+              <div className="p-8">
+                <div className="inline-block px-3 py-1 mb-4 text-sm font-medium text-primary bg-primary/10 rounded-full">
+                  {selectedProject.category}
+                </div>
+                <h3 className="text-3xl font-bold mb-4 text-foreground">{selectedProject.title}</h3>
+                <p className="text-lg text-foreground/70 leading-relaxed">
+                  Experience the quality and craftsmanship that Consulting Contractors brings to every {selectedProject.category.toLowerCase()} project. 
+                  Our team ensures attention to detail and superior durability, working closely with you to bring your vision to life.
+                </p>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       <Footer />
     </main>
