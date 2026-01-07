@@ -25,10 +25,10 @@ export function Footer() {
           <div>
             <h4 className="text-lg font-bold text-primary mb-6">Services</h4>
             <ul className="space-y-4 text-foreground/70">
-              <li><Link href="#" className="hover:text-primary transition-colors">Roofing</Link></li>
-              <li><Link href="#" className="hover:text-primary transition-colors">Remodeling</Link></li>
-              <li><Link href="#" className="hover:text-primary transition-colors">Custom Framing</Link></li>
-              <li><Link href="#" className="hover:text-primary transition-colors">Design & Permits</Link></li>
+              <li><Link href="/roofing" className="hover:text-primary transition-colors">Roofing</Link></li>
+              <li><Link href="/remodeling" className="hover:text-primary transition-colors">Remodeling</Link></li>
+              <li><Link href="/framing" className="hover:text-primary transition-colors">Custom Framing</Link></li>
+              <li><Link href="/design" className="hover:text-primary transition-colors">Design & Permits</Link></li>
             </ul>
           </div>
 
@@ -38,7 +38,11 @@ export function Footer() {
               <li>123 Contractor Way</li>
               <li>Seattle, WA 98101</li>
               <li>(555) 123-4567</li>
-              <li><Button size="sm" variant="outline" className="mt-2">Get a Quote</Button></li>
+              <li>
+                <Link href="/contact">
+                  <Button size="sm" variant="outline" className="mt-2">Get a Quote</Button>
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
