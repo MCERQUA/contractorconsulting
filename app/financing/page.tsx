@@ -4,6 +4,7 @@ import { PageHero } from "@/components/sections/PageHero";
 import { Button } from "@/components/ui/Button";
 import { PremiumCard } from "@/components/ui/PremiumCard";
 import { Check } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 const financingOptions = [
   {
@@ -66,10 +67,13 @@ export default function FinancingPage() {
             {financingOptions.map((option, idx) => (
               <PremiumCard
                 key={idx}
-                className={`p-8 ${option.highlight ? 'ring-2 ring-primary' : ''}`}
+                className={cn(
+                  "p-8",
+                  option.highlight ? "ring-2 ring-primary pt-12" : ""
+                )}
               >
                 {option.highlight && (
-                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-white text-sm font-bold px-4 py-1 rounded-full">
+                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-white text-sm font-bold px-4 py-1 rounded-full z-20 shadow-lg">
                     Most Popular
                   </span>
                 )}

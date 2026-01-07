@@ -233,20 +233,21 @@ export default function PortfolioPage() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={() => setSelectedProject(null)}
-            className="fixed inset-0 z-[1000] flex items-center justify-center p-4 pt-20 bg-black/80 backdrop-blur-sm"
+            className="fixed inset-0 z-[9999] flex items-center justify-center p-4 pt-24 bg-black/90 backdrop-blur-md"
           >
             <motion.div
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
               onClick={(e) => e.stopPropagation()}
-              className="relative w-full max-w-4xl max-h-[85vh] overflow-y-auto bg-white rounded-2xl shadow-2xl"
+              className="relative w-full max-w-4xl max-h-[80vh] overflow-y-auto bg-white rounded-3xl shadow-[0_0_50px_rgba(0,0,0,0.5)] border border-white/10"
             >
               <button
                 onClick={() => setSelectedProject(null)}
-                className="absolute top-4 right-4 z-50 p-2 bg-black/70 hover:bg-black text-white rounded-full transition-colors shadow-lg"
+                className="absolute top-6 right-6 z-[10000] p-3 bg-primary text-white rounded-full hover:scale-110 active:scale-95 transition-all shadow-2xl border-2 border-white"
+                aria-label="Close modal"
               >
-                <X size={24} />
+                <X size={28} />
               </button>
               
               <div className="relative aspect-video w-full">
@@ -255,15 +256,16 @@ export default function PortfolioPage() {
                   alt={selectedProject.title}
                   fill
                   className="object-cover"
+                  priority
                 />
               </div>
               
-              <div className="p-8">
-                <div className="inline-block px-3 py-1 mb-4 text-sm font-medium text-primary bg-primary/10 rounded-full">
+              <div className="p-10">
+                <div className="inline-block px-4 py-1.5 mb-6 text-xs font-black uppercase tracking-widest text-primary bg-primary/10 rounded-full">
                   {selectedProject.category}
                 </div>
-                <h3 className="text-3xl font-bold mb-4 text-foreground">{selectedProject.title}</h3>
-                <p className="text-lg text-foreground/70 leading-relaxed">
+                <h3 className="text-4xl font-black mb-6 text-foreground tracking-tighter">{selectedProject.title}</h3>
+                <p className="text-xl text-foreground/70 leading-relaxed font-medium">
                   Experience the quality and craftsmanship that Consulting Contractors brings to every {selectedProject.category.toLowerCase()} project. 
                   Our team ensures attention to detail and superior durability, working closely with you to bring your vision to life.
                 </p>
